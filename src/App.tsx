@@ -7,7 +7,7 @@ function App() {
   const [shouldReset, setShouldReset] = useState(false);
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
-  const [grid, setGrid] = useState(new Array(8).fill(1));
+  const [grid] = useState(new Array(8).fill(1));
   const [moleIndex, setMoleIndex] = useState<number | null>(null);
   const [timer, setTimer] = useState<number | undefined>(undefined);
   
@@ -99,7 +99,7 @@ fontSize: '20px'
         </div>
       </header>
       <div className="grid-container" style={{ marginTop: '5em' }}>
-        {grid.map((el, ind) => {
+        {grid.map((_el, ind) => {
           return (
             <div key={ind} className="grid-item">
               <div style={{ position: 'relative' }}>
